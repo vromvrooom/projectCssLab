@@ -1,6 +1,7 @@
 body{
     font-family: 'Roboto', 'Helvetica', sans-serif;
     background-color: rgb(224, 224, 224);
+    padding: 0;
 
 }
 
@@ -60,7 +61,46 @@ h1{
     text-align: center;
 }
 
+.footer__main{
+    display: flex;
+    background-color: rgb(22, 21, 32);
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
 
+.footer__logo_title{
+    margin: 0 0 0 100px;
+    color: #f0f0f0;
+}
+
+.footer__menu{
+}
+
+ol li{
+    list-style: none;
+
+}
+
+ol{
+    display: flex;
+    margin: 0 100px 0 0;
+}
+
+li{
+    display: block;
+    color: white;
+    margin-left: 25px;
+}
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    text-decoration-color: #f0f0f0;
+    text-underline-offset: 3px;
+}
 
 
 
