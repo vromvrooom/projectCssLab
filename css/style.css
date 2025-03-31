@@ -1,7 +1,6 @@
 body{
     font-family: 'Roboto', 'Helvetica', sans-serif;
-    background-color: rgb(224, 224, 224);
-    padding: 0;
+    /* background-color: rgb(224, 224, 224); */
 
 }
 
@@ -42,7 +41,7 @@ h1{
 
 .cartblock{
     padding: 10px 100px 10px 100px;
-    background-color: rgb(224, 224, 224);
+    /* background-color: rgb(224, 224, 224); */
 
 }
 
@@ -61,50 +60,132 @@ h1{
     text-align: center;
 }
 
-.footer__main{
+
+.progblock__title{
+    text-align: center;
+}
+
+.progblock{
     display: flex;
-    background-color: rgb(22, 21, 32);
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    height: 60px;
 }
 
-.footer__logo_title{
-    margin: 0 0 0 100px;
-    color: #f0f0f0;
-}
-
-.footer__menu{
-}
-
-ol li{
-    list-style: none;
-
-}
-
-ol{
+.progblock__cart {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-image: url('../img/dog-9478504_1280.jpg'); /* Подставь свой путь */
+    background-size: cover;
+    background-position: center;
     display: flex;
-    margin: 0 100px 0 0;
-}
-
-li{
-    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     color: white;
-    margin-left: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+    transition: transform 0.3s ease-in-out;
+
+
 }
-a{
-    text-decoration: none;
-}
+.progblock__cart:hover{
+    transform: scale(1.05   );
 
-a:hover{
-    text-decoration: underline;
-    text-decoration-color: #f0f0f0;
-    text-underline-offset: 3px;
 }
 
 
 
 
+.progblock__cart::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 128, 0, 0.5); /* Цвет затемнения */
+}
+
+
+
+.progblock__cart_item {
+    position: relative;
+    z-index: 2;
+}
+
+p{
+    font-weight: normal;
+    font-size: 18px;
+}
+.progblock__first{
+    display: flex;
+    margin-bottom: 20px;
+
+}.progblock__second{
+    display: flex;
+}
+
+
+.blockform__title{
+    text-align: center;
+}
+
+
+.blockform{
+    display: flex;
+    justify-content: center;
+}
+.blockform__form_mess{
+
+}
+.contact_form{
+    margin-right: 150px;
+}
+
+#name, #email, #message{
+    width: 400px;
+    padding: 20px 8px 4px; /* Увеличен верхний padding для смещения текста вниз */
+    line-height: 1.5; /* Увеличена высота строки для лучшего позиционирования */
+
+}
+
+.contact_form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+}
+.contact_form label {
+    font-weight: bold;
+}
+.contact_form input,
+.contact_form textarea {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+.send_button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 20px;
+
+}
+.send_button:hover{
+    background-color: #218838;
+    transform: scale(1.05)
+}
 
 
 
@@ -116,7 +197,7 @@ a:hover{
 
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1114px) {
     .cartblock__first{
         display: flex;
         flex-direction: column;
@@ -131,9 +212,39 @@ a:hover{
         height: 100px;
 
     }
+    .header{
+        padding: 0 0 20px 0;
+        
+    }
+    .progblock__first{
+        display: flex;
+        margin-bottom: 20px;
+        flex-direction: column;
+    
+    }.progblock__second{
+        display: flex;
+        flex-direction: column;
+
+    }.progblock__cart{
+        width: 500px;
+        height: 550px;
+        margin: 10px;
+    }
+    iframe{
+        width: 380px;
+        height: 300px;
+    }
+    .blockform{
+        display: flex;
+        flex-direction: column;
+    }   
+    #name, #email, #message{
+        width: 250px;
+        padding: 20px 8px 4px; /* Увеличен верхний padding для смещения текста вниз */
+        line-height: 1.5; 
+    }
 }
 
-/* Мобильные устройства (макс. 768px) */
 @media (max-width: 768px) {
     .outline {
         width: 90px;
@@ -141,12 +252,14 @@ a:hover{
     }
     .cartblock{
         padding: 10px 10px 10px 10px;
-        background-color: rgb(224, 224, 224);
     
+    }.progblock__cart{
+        width: 300px;
+        height: 300px;
+        margin: 10px;
     }
 }
 
-/* Маленькие экраны (макс. 480px) */
 @media (max-width: 480px) {
 
 }
