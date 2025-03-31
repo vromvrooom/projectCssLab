@@ -1,6 +1,6 @@
 body{
     font-family: 'Roboto', 'Helvetica', sans-serif;
-    background-color: rgb(224, 224, 224);
+    /* background-color: rgb(224, 224, 224); */
 
 }
 
@@ -41,7 +41,7 @@ h1{
 
 .cartblock{
     padding: 10px 100px 10px 100px;
-    background-color: rgb(224, 224, 224);
+    /* background-color: rgb(224, 224, 224); */
 
 }
 
@@ -86,6 +86,12 @@ h1{
     font-size: 20px;
     font-weight: bold;
     margin-left: 20px;
+    transition: transform 0.3s ease-in-out;
+
+
+}
+.progblock__cart:hover{
+    transform: scale(1.05   );
 
 }
 
@@ -122,6 +128,64 @@ p{
 }
 
 
+.blockform__title{
+    text-align: center;
+}
+
+
+.blockform{
+    display: flex;
+    justify-content: center;
+}
+.blockform__form_mess{
+
+}
+.contact_form{
+    margin-right: 150px;
+}
+
+#name, #email, #message{
+    width: 400px;
+    padding: 20px 8px 4px; /* Увеличен верхний padding для смещения текста вниз */
+    line-height: 1.5; /* Увеличена высота строки для лучшего позиционирования */
+
+}
+
+.contact_form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+}
+.contact_form label {
+    font-weight: bold;
+}
+.contact_form input,
+.contact_form textarea {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+.send_button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 20px;
+
+}
+.send_button:hover{
+    background-color: #218838;
+    transform: scale(1.05)
+}
 
 
 
@@ -133,7 +197,7 @@ p{
 
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1114px) {
     .cartblock__first{
         display: flex;
         flex-direction: column;
@@ -163,12 +227,24 @@ p{
 
     }.progblock__cart{
         width: 500px;
-        height: 700px;
+        height: 550px;
         margin: 10px;
+    }
+    iframe{
+        width: 380px;
+        height: 300px;
+    }
+    .blockform{
+        display: flex;
+        flex-direction: column;
+    }   
+    #name, #email, #message{
+        width: 250px;
+        padding: 20px 8px 4px; /* Увеличен верхний padding для смещения текста вниз */
+        line-height: 1.5; 
     }
 }
 
-/* Мобильные устройства (макс. 768px) */
 @media (max-width: 768px) {
     .outline {
         width: 90px;
@@ -176,17 +252,14 @@ p{
     }
     .cartblock{
         padding: 10px 10px 10px 10px;
-        background-color: rgb(224, 224, 224);
     
     }.progblock__cart{
         width: 300px;
         height: 300px;
         margin: 10px;
     }
-    
 }
 
-/* Маленькие экраны (макс. 480px) */
 @media (max-width: 480px) {
 
 }
